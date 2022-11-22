@@ -44,6 +44,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Douglas.Venom.Registry">
+      <HintPath>..\..\..\Venom\VenomRegistry\VenomRegistry\bin\Release\Douglas.Venom.Registry.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
