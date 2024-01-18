@@ -10,6 +10,8 @@
         Dim strType As String = SqlDbType.VarChar
         Dim queryString As String = msg
 
+        Dim s As String = String.Empty
+
 
         ExecuteProcessMsgLog(strConnectionString, strStoreProcedure, strParameter, strType, queryString)
 
