@@ -177,6 +177,7 @@ Err:
         Dim apt As New SqlClient.SqlDataAdapter(cmd)
 
         con.Close()
+        con.Dispose()
         msgProcessLog(strConnectionString, strStoreProcedure)
 
 
