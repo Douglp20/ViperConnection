@@ -76,6 +76,7 @@ Err:
         RaiseEvent ErrorMessage(Err.Description, Err.Number, rtn)
 
     End Sub
+
     Public Sub ExecuteProcessMsgLog(ByVal strConnectionString As String, ByVal strStoreProcedure As String, ByVal strParameter As String, ByVal strType As String, ByRef queryString As String)
         On Error GoTo Err
         Dim UserLogin As String
@@ -168,18 +169,18 @@ Err:
     Public Function getSqlDataAdapter(ByVal strConnectionString As String, ByVal strStoreProcedure As String) As SqlClient.SqlDataAdapter
 
         On Error GoTo Err
-
         Dim cmd As New SqlClient.SqlCommand()
         Dim con As New SqlClient.SqlConnection(strConnectionString)
         con.Open()
         cmd.CommandText = strStoreProcedure
         cmd.CommandType = CommandType.StoredProcedure
+
         cmd.Connection = con
 
         Dim apt As New SqlClient.SqlDataAdapter(cmd)
 
         con.Close()
-        con.Dispose()
+
         msgProcessLog(strConnectionString, strStoreProcedure)
 
 
